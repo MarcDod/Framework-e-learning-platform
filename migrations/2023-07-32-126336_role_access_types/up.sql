@@ -54,6 +54,8 @@ CREATE TRIGGER valid_role_access_type BEFORE INSERT ON role_access_types
     FOR EACH ROW EXECUTE PROCEDURE valid_role_access_type();
 
 CREATE FUNCTION role_delete_if_all_false() RETURNS trigger AS $role_delete_if_all_false$
+    DECLARE
+		amount INT;
     BEGIN
         IF NEW.permission = False
         AND NEW.set_permission = False
@@ -64,6 +66,17 @@ CREATE FUNCTION role_delete_if_all_false() RETURNS trigger AS $role_delete_if_al
             AND access_type = NEW.access_type;
         END IF;
 
+        amount := (
+			SELECT COUNT(*)
+			FROM role_access_types
+			WHERE role_permission_id = NEW.role_permission_id
+		);
+
+		IF amount = 0 THEN
+            DELETE FROM role_permissions rp
+            WHERE rp.id = NEW.role_permission_id;
+		END IF;
+		
         RETURN NEW;
     END;
 $role_delete_if_all_false$ LANGUAGE plpgsql;
