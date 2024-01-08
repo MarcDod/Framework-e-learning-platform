@@ -1,0 +1,256 @@
+[{
+    "_id": "f9ead0f1-e78c-4b10-81cb-b438db03f5d9",
+    "task_type": "Multiple-Choice",
+    "task": {
+      "question": "Wie viele Bits ergeben ein Byte?",
+      "answers": [
+        "8",
+        "4",
+        "2",
+        "16"
+      ]
+    },
+    "state": "ACTIVE",
+    "solution": {
+      "solution": 0
+    }
+  },
+  {
+    "_id": "adb82af1-0911-459e-9ed9-90a388579c70",
+    "task_type": "CYK-Algorithm",
+    "task": {
+      "V": [
+        "S",
+        "A",
+        "B",
+        "C"
+      ],
+      "T": [
+        "a",
+        "b"
+      ],
+      "P": [
+        {
+          "l": "S",
+          "r": [
+            [
+              "B",
+              "A"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            [
+              "b"
+            ]
+          ]
+        },
+        {
+          "l": "A",
+          "r": [
+            [
+              "B",
+              "A"
+            ],
+            [
+              "a"
+            ]
+          ]
+        },
+        {
+          "l": "B",
+          "r": [
+            [
+              "C",
+              "C"
+            ],
+            [
+              "b"
+            ]
+          ]
+        },
+        {
+          "l": "C",
+          "r": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "a"
+            ]
+          ]
+        }
+      ],
+      "w": "abba",
+      "S": "S"
+    },
+    "state": "ACTIVE",
+    "solution": {
+      "solution": [
+        {
+          "A": null,
+          "C": null
+        },
+        {
+          "S": null,
+          "B": null
+        },
+        {
+          "S": null,
+          "B": null
+        },
+        {
+          "A": null,
+          "C": null
+        },
+        {
+          "C": null
+        },
+        {},
+        {
+          "S": null,
+          "A": null
+        },
+        {},
+        {
+          "S": null,
+          "A": null
+        },
+        {
+          "S": null
+        }
+      ]
+    }
+  },
+  {
+    "_id": "730d82c9-5ef9-4e3e-aed9-38d45cee618e",
+    "task_type": "CYK-Algorithm",
+    "task": {
+      "V": [
+        "S",
+        "A",
+        "B",
+        "C"
+      ],
+      "T": [
+        "a",
+        "b"
+      ],
+      "P": [
+        {
+          "l": "S",
+          "r": [
+            [
+              "B",
+              "A"
+            ],
+            [
+              "C",
+              "A"
+            ],
+            [
+              "b"
+            ]
+          ]
+        },
+        {
+          "l": "A",
+          "r": [
+            [
+              "B",
+              "A"
+            ],
+            [
+              "a"
+            ]
+          ]
+        },
+        {
+          "l": "B",
+          "r": [
+            [
+              "C",
+              "C"
+            ],
+            [
+              "b"
+            ]
+          ]
+        },
+        {
+          "l": "C",
+          "r": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "a"
+            ]
+          ]
+        }
+      ],
+      "S": "S",
+      "w": "baba"
+    },
+    "state": "ACTIVE",
+    "solution": {
+      "solution": [
+        {
+          "S": null,
+          "B": null
+        },
+        {
+          "A": null,
+          "C": null
+        },
+        {
+          "S": null,
+          "B": null
+        },
+        {
+          "A": null,
+          "C": null
+        },
+        {
+          "A": null,
+          "S": null
+        },
+        {
+          "C": null
+        },
+        {
+          "A": null,
+          "S": null
+        },
+        {
+          "C": null
+        },
+        {
+          "S": null,
+          "B": null
+        },
+        {
+          "S": null,
+          "B": null
+        }
+      ]
+    }
+  },
+  {
+    "_id": "79def821-fb41-4463-b40e-a374382f1fc4",
+    "task_type": "Multiple-Choice",
+    "task": {
+      "question": "Welche der folgenden Aussagen ist wahr?",
+      "answers": [
+        "{1, 3} ∈ {1, 2, 3}",
+        "{1} ∈ {{1}, {2}}"
+      ]
+    },
+    "state": "ACTIVE",
+    "solution": {
+      "solution": 1
+    }
+  }]

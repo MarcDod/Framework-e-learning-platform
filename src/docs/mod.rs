@@ -1,0 +1,10 @@
+pub mod docs;
+mod auth_docs;
+mod user_docs;
+mod groups_docs;
+mod member_docs;
+mod task_docs;
+mod task_packages_docs;
+mod solution_attempts_docs;
+mod answer_docs;
+mod permission_docs;

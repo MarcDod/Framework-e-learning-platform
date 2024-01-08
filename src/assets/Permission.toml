@@ -1,0 +1,224 @@
+[config]
+
+[[config.ressources]]
+value = "group"
+name = "Group"
+
+[[config.ressources.routes]]
+path = "/api/groups/"
+method = "POST"
+required_access_types = ['Create']
+
+[[config.ressources.routes]]
+path = "/api/group/{group_id}/"
+param = "group_id"
+method = "DELETE"
+required_access_types = ['Delete']
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/"
+param = "group_id"
+method = "GET"
+required_access_types = ['Read']
+
+[[config.ressources]]
+value = "group_meta_data"
+name = "GroupMetaData"
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/metadata"
+param = "group_id"
+method = "GET"
+required_access_types = ['Read']
+
+[[config.ressources]]
+value = "group_member"
+name = "GroupMember"
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/members/"
+param = "group_id"
+method = "POST"
+required_access_types = ['Write']
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/members/"
+param = "group_id"
+method = "GET"
+required_access_types = ['Read']
+
+[[config.ressources]]
+value = "user_answer"
+name = "Answer"
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/answers/{answer_id}/"
+param = "group_id"
+method = "GET"
+required_access_types = ['Read']
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/answers/{answer_id}/"
+param = "group_id"
+method = "PATCH"
+required_access_types = ['Write']
+
+[[config.ressources]]
+value = "solution_attempt"
+name = "Solution attempt"
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/solution_attempts/{solution_attempt_id}/"
+param = "group_id"
+method = "GET"
+required_access_types = ['Read']
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/{task_package_id}/user/solution_attempts/"
+param = "group_id"
+method = "GET"
+required_access_types = ['Read']
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/{task_package_id}/users/{user_id}/solution_attempts/"
+param = "group_id"
+method = "GET"
+required_access_types = ['Read']
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/{task_package_id}/solution_attempts/"
+param = "group_id"
+method = "POST"
+required_access_types = ['Create']
+
+[[config.ressources]]
+value = "solution_attempt_finish"
+name = "Finish of solution attempt"
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/solution_attempts/{solution_attempt_id}/finish"
+param = "group_id"
+method = "POST"
+required_access_types = ["Write"]
+
+[[config.ressources]]
+value = "task_package"
+name = "Task package"
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/"
+param = "group_id"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/"
+param = "group_id"
+method = "POST"
+required_access_types = ["Create"]
+
+[[config.ressources]]
+value = "task_package_task"
+name = "Task package tasks"
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/{task_package_id}/tasks/"
+param = "group_id"
+method = "POST"
+required_access_types = ["Write"]
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/{task_package_id}/tasks/"
+param = "group_id"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/{task_package_id}/tasks/"
+param = "group_id"
+method = "DELETE"
+required_access_types = ["Delete"]
+
+[[config.ressources]]
+value = "task_package_statistic"
+name = "Statistic task package"
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/task_packages/{task_package_id}/users/{user_id}/statistic"
+param = "group_id"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources]]
+value = "permission"
+name = "Permissions"
+
+[[config.ressources.routes]]
+path = "/api/ressources/"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/user/permissions"
+param = "group_id"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/users/{user_id}/permissions"
+param = "group_id"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources.routes]]
+path = "/api/groups/{group_id}/users/{user_id}/permissions"
+param = "group_id"
+method = "POST"
+required_access_types = ["Write"]
+
+[[config.ressources]]
+value = "task"
+name = "Tasks"
+
+[[config.ressources.routes]]
+path = "/api/tasks/"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources.routes]]
+path = "/api/tasks/{task_id}/"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources.routes]]
+path = "/api/tasks/"
+method = "POST"
+required_access_types = ["Create"]
+
+[[config.ressources.routes]]
+path = "/api/tasks/{task_id}/"
+method = "DELETE"
+required_access_types = ["Delete"]
+
+[[config.ressources]]
+value = "solution"
+name = "Solution"
+
+[[config.ressources.routes]]
+path = "/api/tasks/{task_id}/solution"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources]]
+value = "schema"
+name = "Schemas"
+
+[[config.ressources.routes]]
+path = "/api/tasks/schemas"
+method = "GET"
+required_access_types = ["Read"]
+
+[[config.ressources.routes]]
+path = "/api/tasks/schemas"
+method = "POST"
+required_access_types = ["Create"]

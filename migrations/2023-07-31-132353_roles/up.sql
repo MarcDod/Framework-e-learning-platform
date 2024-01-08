@@ -1,0 +1,8 @@
+-- Your SQL goes here
+CREATE TABLE roles (
+    name VARCHAR(45) NOT NULL,
+    state STATE NOT NULL DEFAULT 'active',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT(NOW()) NOT NULL,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT(NOW()) NOT NULL,
+    value_key VARCHAR(45) PRIMARY KEY
+);

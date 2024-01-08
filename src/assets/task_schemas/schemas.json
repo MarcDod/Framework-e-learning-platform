@@ -1,0 +1,114 @@
+[{
+  "_id": "5fc953a4-b56a-4f70-9a1a-55cb8ca20c4a",
+  "task_type": "Multiple-Choice",
+  "task_schema": {
+    "type": "object",
+    "properties": {
+      "question": {
+        "type": "string"
+      },
+      "answers": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "question",
+      "answers"
+    ],
+    "additionalProperties": false
+  },
+  "solution_schema": {
+    "type": "object",
+    "properties": {
+      "solution": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "required": [
+      "solution"
+    ],
+    "additionalProperties": false
+  }
+},
+{
+  "_id": "4c239479-62b7-4525-9a64-28d5945a38c0",
+  "task_type": "CYK-Algorithm",
+  "task_schema": {
+    "type": "object",
+    "properties": {
+      "V": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "T": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "P": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "l": {
+              "type": "string"
+            },
+            "r": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "l",
+            "r"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "w": {
+        "type": "string"
+      },
+      "S": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "V",
+      "T",
+      "P",
+      "w",
+      "S"
+    ],
+    "additionalProperties": false
+  },
+  "solution_schema": {
+    "type": "object",
+    "properties": {
+      "solution": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    "required": [
+      "solution"
+    ],
+    "additionalProperties": false
+  }
+}]
